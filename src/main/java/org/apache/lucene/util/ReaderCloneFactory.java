@@ -275,7 +275,7 @@ public class ReaderCloneFactory {
     /**
      * Returns a ReaderCloner suitable for handling general <code>S</code>s instances (inheriting {@link java.io.Reader}).
      *
-     * Calls <code>ReaderCloneFactory.<Reader,S>getCloner(Reader.class, forClass, (S)null)</code>.
+     * Calls {@code ReaderCloneFactory.<Reader,S>getCloner(Reader.class, forClass, (S)null)}.
      *
      * Not all optimizations can be ran, like unwrapping and failing initialization fallback.
      * However, for standard cases, when performance is really critical,
@@ -293,8 +293,8 @@ public class ReaderCloneFactory {
     /**
      * Returns an initialized ReaderCloner, for the given Reader.
      *
-     * Calls <code>ReaderCloneFactory.<Reader, S>getCloner(Reader.class, (Class<S>)forReader.getClass(), forReader)</code>.
-     * If <code>forReader</code> is <code>null</code>, works as {@link ReaderCloneFactory#getGenericCloner()}.
+     * Calls {@code ReaderCloneFactory.<Reader, S>getCloner(Reader.class, (Class<S>)forReader.getClass(), forReader)}.
+     * If {@code forReader} is {@code null}, works as {@link ReaderCloneFactory#getGenericCloner()}.
      *
      * @param forReader The Reader instance to return and initialize a ReaderCloner for. Can be null.
      * @param <S> The class of the given Reader
